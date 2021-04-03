@@ -65,11 +65,10 @@ int main(int argc, char* argv[])
 				printf("arr[%i] = %i\n", i, arr[i]);
 			}
 			free(arr);
-			MPI_Send(&sum, arr_size, MPI_INT, 0, 1, MPI_COMM_WORLD);
+			MPI_Send(&sum, 1, MPI_INT, 0, 1, MPI_COMM_WORLD);
 		}
 	}
 
 
 	MPI_Finalize();
 }
-
